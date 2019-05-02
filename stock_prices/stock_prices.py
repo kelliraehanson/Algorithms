@@ -1,24 +1,32 @@
 #!/usr/bin/python
+import math
 
 import argparse
 
 def find_max_profit(prices):
-  smallest = prices[0]
-  biggest = prices[0]
+  max_profit = -math.inf
+  min_price = math.inf
 
-for price in prices:
+  for price in prices:
+    max_profit = max(price - min_price, max_profit) #-inf, -780
+    min_price = min(price, min_price) #1550, 270
+  return max_profit
+  
+find_max_profit([1050, 270, 1540, 3800, 2])
 
-  if price > biggest:
-    biggest = price
-  elif price < smallest:
-    smallest = price
+# In class example
+# def find_max_profit(prices):
+#   min_price = prices[0]
+#   max_profit = prices[1] - min_price
 
-  # print(f'Smallest: {smallest}')
-  # print(f'Biggest: {biggest}')
+#   for i in range(1, len(prices)):
+#     price = prices[i]
+#     max_profit = max(price - min_price, max_profit)
+#     min_price = min(price, min_price)
 
-return biggest - smallest
-
-print(f"Max Profit: {find_max_profit([10, 7, 5, 8, 11, 9]), 6}")
+#   return max_profit
+  
+# find_max_profit([1050, 270, 1540, 3800, 2])
  
 
 if __name__ == '__main__':
