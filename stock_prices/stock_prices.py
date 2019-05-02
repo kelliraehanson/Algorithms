@@ -10,6 +10,7 @@ def find_max_profit(prices):
   for price in prices:
     max_profit = max(price - min_price, max_profit) #-inf, -780
     min_price = min(price, min_price) #1550, 270
+  print(f"\n\n** The Max Profit is: ${max_profit} **\n\n")
   return max_profit
   
 find_max_profit([1050, 270, 1540, 3800, 2])

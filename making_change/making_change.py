@@ -3,7 +3,8 @@
 import sys
 
 def making_change(amount, denominations):
-  pass 
+  options = [5, 10, 25, 50] 
+  cache = [1] 
 
 
 if __name__ == "__main__":

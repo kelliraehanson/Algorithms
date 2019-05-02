@@ -18,4 +18,4 @@ if __name__ == '__main__':
   recipe = { 'milk': 100, 'butter': 50, 'flour': 5 }
   ingredients = { 'milk': 500, 'butter': 200, 'flour': 300 }
   # ingredients = { 'milk': 132, 'butter': 48, 'flour': 51 }
-  print("{batches} batches can be made from the available ingredients: {ingredients}.".format(batches=recipe_batches(recipe, ingredients), ingredients=ingredients))
+  print("\n\n** {batches} batches can be made from the available ingredients:\n{ingredients}. **\n\n".format(batches=recipe_batches(recipe, ingredients), ingredients=ingredients))
